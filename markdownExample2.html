@@ -1,0 +1,489 @@
+<h1>
+  <a
+    id="user-content-eslint-config"
+    class="anchor"
+    aria-hidden="true"
+    href="#eslint-config"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >eslint-config
+</h1>
+<p>
+  <a href="https://github.com/ridedott/eslint-config/blob/master/LICENSE"
+    ><img
+      src="https://camo.githubusercontent.com/4626027a7612423e85d0b158afaa0016c8ae5359930ebd85fd110b621bfb3472/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f72696465646f74742f65736c696e742d636f6e666967"
+      alt="license: MIT"
+      data-canonical-src="https://img.shields.io/github/license/ridedott/eslint-config"
+      style="max-width: 100%" /></a
+  ><br />
+  <a href="https://github.com/ridedott/eslint-config/actions"
+    ><img
+      src="https://github.com/ridedott/eslint-config/workflows/Continuous%20Delivery/badge.svg?branch=master"
+      alt="GitHub Actions Status"
+      style="max-width: 100%" /></a
+  ><br />
+  <a href="https://www.npmjs.com/package/@ridedott/eslint-config" rel="nofollow"
+    ><img
+      src="https://camo.githubusercontent.com/f12f4940576b3e7df08a9bfda9830b5d548613779564da525c1b6e01a2a326ff/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f4072696465646f74742f65736c696e742d636f6e666967"
+      alt="npm version"
+      data-canonical-src="https://img.shields.io/npm/v/@ridedott/eslint-config"
+      style="max-width: 100%" /></a
+  ><br />
+  <a href="https://github.com/prettier/prettier"
+    ><img
+      src="https://camo.githubusercontent.com/48a41f43affa2e6253d6a48e0ee662ec53ce13c46442ac815e81d36b6e6b434d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e737667"
+      alt="code style: prettier"
+      data-canonical-src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg"
+      style="max-width: 100%" /></a
+  ><br />
+  <a href="http://commitizen.github.io/cz-cli/" rel="nofollow"
+    ><img
+      src="https://camo.githubusercontent.com/aca3301042bdedae125df537db587fe82c2123dc8a2c46f0859840b5fa4b7f1a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d6974697a656e2d667269656e646c792d627269676874677265656e2e737667"
+      alt="Commitizen friendly"
+      data-canonical-src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"
+      style="max-width: 100%"
+  /></a>
+</p>
+<p>Safety-oriented, fp-first configuration of ESLint.</p>
+<h2>
+  <a id="user-content-usage" class="anchor" aria-hidden="true" href="#usage"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Usage
+</h2>
+<h3>
+  <a
+    id="user-content-basic-setup"
+    class="anchor"
+    aria-hidden="true"
+    href="#basic-setup"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Basic setup
+</h3>
+<p>
+  To use this configuration, install it as a <code>devDependency</code> first,
+  alongside<br />
+  ESLint itself:
+</p>
+<div class="highlight highlight-source-shell">
+  <pre>npm install --save-dev @ridedott/eslint-config eslint</pre>
+</div>
+<p>
+  Once it is finished, add an ESLint configuration to your project in a
+  top-level<br />
+  <code>.eslintrc.yaml</code> file. An example configuration:
+</p>
+<div class="highlight highlight-source-yaml">
+  <pre><span class="pl-ent">env</span>:
+<span class="pl-ent">es6</span>: <span class="pl-c1">true</span>
+<span class="pl-ent">node</span>: <span class="pl-c1">true</span>
+<span class="pl-ent">extends</span>: <span class="pl-s"><span class="pl-pds">'</span>@ridedott/eslint-config<span class="pl-pds">'</span></span>
+<span class="pl-ent">overrides</span>:
+- <span class="pl-ent">env</span>:
+<span class="pl-ent">jest</span>: <span class="pl-c1">true</span>
+<span class="pl-ent">files</span>:
+- <span class="pl-s">__mocks__/**/*.ts</span>
+- <span class="pl-s">src/**/*.spec.ts</span>
+- <span class="pl-s">test/**/*.ts</span>
+<span class="pl-ent">rules</span>:
+<span class="pl-s"><span class="pl-pds">'</span><span class="pl-ent">@typescript-eslint/no-magic-numbers</span><span class="pl-pds">'</span></span>: <span class="pl-s">off</span>
+<span class="pl-ent">max-lines-per-function</span>: <span class="pl-s">off</span>
+<span class="pl-ent">max-statements</span>: <span class="pl-s">off</span>
+<span class="pl-ent">no-magic-numbers</span>: <span class="pl-s">off</span>
+<span class="pl-ent">unicorn/no-unsafe-regex</span>: <span class="pl-s">off</span>
+- <span class="pl-ent">files</span>:
+- <span class="pl-s">scripts/**/*.ts</span>
+<span class="pl-ent">rules</span>:
+<span class="pl-ent">no-console</span>: <span class="pl-s">off</span>
+- <span class="pl-ent">files</span>:
+- <span class="pl-s">__mocks__/**/*.ts</span>
+<span class="pl-ent">rules</span>:
+<span class="pl-ent">unicorn/filename-case</span>: <span class="pl-s">off</span>
+<span class="pl-ent">parserOptions</span>:
+<span class="pl-ent">ecmaVersion</span>: <span class="pl-c1">2020</span>
+<span class="pl-ent">project</span>: <span class="pl-s">tsconfig.json</span>
+<span class="pl-ent">sourceType</span>: <span class="pl-s">module</span></pre>
+</div>
+<p>
+  and a script in your <code>package.json</code> which will help you run ESLint
+  with correct<br />
+  dependencies:
+</p>
+<div class="highlight highlight-source-json">
+  <pre>{
+<span class="pl-ent">"scripts"</span>: {
+<span class="pl-ent">"lint"</span>: <span class="pl-s"><span class="pl-pds">"</span>eslint '**/*.ts'<span class="pl-pds">"</span></span>,
+<span class="pl-ent">"lint:fix"</span>: <span class="pl-s"><span class="pl-pds">"</span>eslint --fix '**/*.ts'<span class="pl-pds">"</span></span>
+}
+}</pre>
+</div>
+<h3>
+  <a
+    id="user-content-visual-studio-code-integration"
+    class="anchor"
+    aria-hidden="true"
+    href="#visual-studio-code-integration"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Visual Studio Code integration
+</h3>
+<p>
+  If you would like to add a
+  <a href="https://code.visualstudio.com" rel="nofollow">Visual Studio Code</a
+  ><br />
+  integration too, consider starting with the following configuration.
+</p>
+<p>
+  Add an extension to the list of suggested ones in
+  <code>.vscode/extensions.json</code>:
+</p>
+<div class="highlight highlight-source-json">
+  <pre>{
+<span class="pl-ent">"recommendations"</span>: [<span class="pl-s"><span class="pl-pds">"</span>dbaeumer.vscode-eslint<span class="pl-pds">"</span></span>]
+}</pre>
+</div>
+<p>
+  Add ESLint settings to the workspace settings in
+  <code>.vscode/settings.json</code>:
+</p>
+<div class="highlight highlight-source-json">
+  <pre>{
+<span class="pl-ent">"eslint.codeAction.disableRuleComment"</span>: {
+<span class="pl-ent">"enable"</span>: <span class="pl-c1">true</span>,
+<span class="pl-ent">"location"</span>: <span class="pl-s"><span class="pl-pds">"</span>separateLine<span class="pl-pds">"</span></span>
+},
+<span class="pl-ent">"eslint.codeAction.showDocumentation"</span>: {
+<span class="pl-ent">"enable"</span>: <span class="pl-c1">true</span>
+},
+<span class="pl-ent">"eslint.enable"</span>: <span class="pl-c1">true</span>,
+<span class="pl-ent">"eslint.lintTask.enable"</span>: <span class="pl-c1">true</span>,
+<span class="pl-ent">"eslint.run"</span>: <span class="pl-s"><span class="pl-pds">"</span>onType<span class="pl-pds">"</span></span>
+}</pre>
+</div>
+<h2>
+  <a
+    id="user-content-getting-started"
+    class="anchor"
+    aria-hidden="true"
+    href="#getting-started"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Getting Started
+</h2>
+<p>
+  These instructions will get you a copy of the project up and running on
+  your<br />
+  local machine for development and testing purposes. See usage notes on how
+  to<br />
+  consume this package in your project.
+</p>
+<h3>
+  <a
+    id="user-content-prerequisites"
+    class="anchor"
+    aria-hidden="true"
+    href="#prerequisites"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Prerequisites
+</h3>
+<p>Minimal requirements to set up the project:</p>
+<ul>
+  <li>
+    <a href="https://nodejs.org/en" rel="nofollow">Node.js</a> v10, installation
+    instructions can be found<br />
+    on the official website, a recommended installation option is to use<br />
+    <a href="https://github.com/creationix/nvm#readme">Node Version Manager</a>.
+    It can be<br />
+    installed in a<br />
+    <a href="https://nodejs.org/en/download/package-manager/#nvm" rel="nofollow"
+      >few commands</a
+    >.
+  </li>
+  <li>
+    A package manager like
+    <a href="https://yarnpkg.com" rel="nofollow">Yarn</a> or<br />
+    <a href="https://www.npmjs.com" rel="nofollow">npm</a>. All instructions in
+    the documentation will<br />
+    follow the npm syntax.
+  </li>
+  <li>
+    Optionally a <a href="https://git-scm.com" rel="nofollow">Git</a> client.
+  </li>
+</ul>
+<h3>
+  <a
+    id="user-content-installing"
+    class="anchor"
+    aria-hidden="true"
+    href="#installing"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Installing
+</h3>
+<p>Start by cloning the repository:</p>
+<div class="highlight highlight-source-shell">
+  <pre>git clone git@github.com:ridedott/eslint-config.git</pre>
+</div>
+<p>
+  In case you don't have a git client, you can get the latest version directly
+  by<br />
+  using
+  <a href="https://github.com/ridedott/eslint-config/archive/master.zip"
+    >this link</a
+  ><br />
+  and extracting the downloaded archive.
+</p>
+<p>Go the the right directory and install dependencies:</p>
+<div class="highlight highlight-source-shell">
+  <pre><span class="pl-c1">cd</span> eslint-config
+npm install</pre>
+</div>
+<p>That's it! You can now go to the next step.</p>
+<h2>
+  <a id="user-content-tests" class="anchor" aria-hidden="true" href="#tests"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Tests
+</h2>
+<p>
+  This repository does not contain any source code, just the configuration, so
+  no<br />
+  tests are present.
+</p>
+<h3>
+  <a
+    id="user-content-formatting"
+    class="anchor"
+    aria-hidden="true"
+    href="#formatting"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Formatting
+</h3>
+<p>
+  This project uses <a href="https://prettier.io" rel="nofollow">Prettier</a> to
+  automate formatting. All<br />
+  supported files are being reformatted in a precommit hook. You can also use
+  one<br />
+  of the two scripts to validate and optionally fix all of the files:
+</p>
+<div class="highlight highlight-source-shell">
+  <pre>
+npm run format
+npm run format:fix</pre
+  >
+</div>
+<h2>
+  <a
+    id="user-content-publishing"
+    class="anchor"
+    aria-hidden="true"
+    href="#publishing"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Publishing
+</h2>
+<p>
+  Publishing is handled in an automated way and must not be performed manually.
+</p>
+<p>
+  Each commit to the master branch is automatically deployed to both npm and<br />
+  GitHub Packages registries with a version specified in
+  <code>package.json</code>. All other<br />
+  commits are published as pre-releases by the integration pipeline.
+</p>
+<h2>
+  <a
+    id="user-content-contributing"
+    class="anchor"
+    aria-hidden="true"
+    href="#contributing"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Contributing
+</h2>
+<p>See <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
+<h2>
+  <a
+    id="user-content-built-with"
+    class="anchor"
+    aria-hidden="true"
+    href="#built-with"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Built with
+</h2>
+<h3>
+  <a
+    id="user-content-automation"
+    class="anchor"
+    aria-hidden="true"
+    href="#automation"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Automation
+</h3>
+<ul>
+  <li><a href="https://github.com/features/actions/">GitHub Actions</a></li>
+</ul>
+<h2>
+  <a
+    id="user-content-versioning"
+    class="anchor"
+    aria-hidden="true"
+    href="#versioning"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Versioning
+</h2>
+<p>
+  This project adheres to
+  <a href="http://semver.org" rel="nofollow">Semantic Versioning</a> v2.
+</p>
+<p>
+  <strong>IMPORTANT</strong> Changes and additions of linting rules are not
+  considered breaking<br />
+  changes.
+</p>

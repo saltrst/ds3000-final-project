@@ -1,0 +1,120 @@
+<h1>
+  <a
+    id="user-content-link-local-dependencies"
+    class="anchor"
+    aria-hidden="true"
+    href="#link-local-dependencies"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Link local dependencies
+</h1>
+<p>
+  Just make relative symbolic links in local dependencies, not update, install
+  or check differences.
+</p>
+<h2>
+  <a id="user-content-usage" class="anchor" aria-hidden="true" href="#usage"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Usage
+</h2>
+<ul>
+  <li>package.json</li>
+</ul>
+<div class="highlight highlight-source-json">
+  <pre>{
+  <span class="pl-ent">"scripts"</span>: {
+    <span class="pl-ent">"postinstall"</span>: <span class="pl-s"><span class="pl-pds">"</span>npx @plaidev/link-local-dependencies<span class="pl-pds">"</span></span>,
+    <span class="pl-ent">"local:postinstall"</span>: <span class="pl-s"><span class="pl-pds">"</span>echo 'this script will be executed after linking local dependencies'<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-ent">"localDependencies"</span>: {
+    <span class="pl-ent">"packageA"</span>: <span class="pl-s"><span class="pl-pds">"</span>./packages/packageA<span class="pl-pds">"</span></span>
+  }
+}
+</pre>
+</div>
+<ul>
+  <li>js</li>
+</ul>
+<div class="highlight highlight-source-ts">
+  <pre><span class="pl-k">import</span> <span class="pl-s1">packageA</span> <span class="pl-k">from</span> <span class="pl-s">'packageA'</span><span class="pl-kos">;</span>
+<span class="pl-k">const</span> <span class="pl-s1">packageA</span> <span class="pl-c1">=</span> <span class="pl-en">require</span><span class="pl-kos">(</span><span class="pl-s">'packageA'</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre>
+</div>
+<ul>
+  <li>make links</li>
+</ul>
+<pre><code>$ npx @plaidev/link-local-dependencies
+</code></pre>
+<h2>
+  <a
+    id="user-content-before-you-use"
+    class="anchor"
+    aria-hidden="true"
+    href="#before-you-use"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Before you use
+</h2>
+<p>
+  This package requires <code>node.js &gt;= 10.12.0</code>, since we use
+  fs.mkdir with recursive option.
+</p>
+<h2>
+  <a id="user-content-why" class="anchor" aria-hidden="true" href="#why"
+    ><svg
+      class="octicon octicon-link"
+      viewBox="0 0 16 16"
+      version="1.1"
+      width="16"
+      height="16"
+      aria-hidden="true"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"
+      ></path></svg></a
+  >Why
+</h2>
+<p>
+  We, dev members in plaid inc, are developping very big product which is
+  written in nodejs with mono structured repository.<br />
+  To develop mono structured repository with nodejs, we have to orchestrate
+  multiple packages to harmonize each other. Luckily, there are some choices to
+  handle it. For example, lerna is one of these, which is widely used in many
+  mono structured projects. We tried several useful utilities, lerna, yarn
+  workspace, pnpm workspace, and npm link. These utilities, however, were not
+  suited to our case. Lerna forces us to unnecessarily learn extra usages, yarn
+  hoisting breaks docker environment with too many filesytem use, pnpm breaks
+  dependency solving, and npm link has fatal bugs! Eventually, we adopted an
+  super simple solution - just linking -.
+</p>
